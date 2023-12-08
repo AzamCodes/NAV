@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Responsive Navbar</title>
+  </head>
+  <body>
+    <div class="">
+      <nav
+        class="bg-[#404EED] z-[9999] px-5 py-3 lg:px-24 lg:py-6 flex justify-between items-center"
+      >
+        <div class="text-lg font-bold text-white flex items-center gap-2">
+          <i class="text-2xl fa-brands fa-discord"></i>Discord
+        </div>
+        <ul class="gap-8 hidden md:flex">
+          <li class="text-white font-semibold text-base">Discover</li>
+          <li class="text-white font-semibold text-base">Blog</li>
+          <li class="text-white font-semibold text-base">Career</li>
+          <li class="text-white font-semibold text-base">Support</li>
+          <li class="text-white font-semibold text-base">Nitro</li>
+        </ul>
+
+        <div class="flex items-center gap-5">
+          <span
+            class="bg-white text-black rounded-2xl py-1 px-4 hover:shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)]"
+          >
+            Login
+          </span>
+
+          <i
+            id="mobile-menu-btn"
+            class="cursor-pointer text-xl md:hidden text-white fa-solid fa-bars"
+          ></i>
+        </div>
+      </nav>
+      <ul
+        class="mobile-menu z-0 flex flex-col gap-8 absolute top-[-100%] left-0 p-5 w-full transition-all ease-in-out duration-300 cursor-pointer bg-blue-600"
+      >
+        <li class="text-white font-semibold text-base">Discover</li>
+        <li class="text-white font-semibold text-base">Blog</li>
+        <li class="text-white font-semibold text-base">Career</li>
+        <li class="text-white font-semibold text-base">Support</li>
+        <li class="text-white font-semibold text-base">Nitro</li>
+      </ul>
+
+      <script>
+        const btn = document.querySelector("#mobile-menu-btn");
+        const menu = document.querySelector(".mobile-menu");
+
+        btn.onclick = () => {
+          btn.classList.toggle("fa-x");
+          menu.classList.toggle("top-[9%]");
+        };
+      </script>
+    </div>
+  </body>
+</html>
